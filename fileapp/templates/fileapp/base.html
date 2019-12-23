@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+        {% block body_block %}
+    {% endblock %}
+
+        <div>
+            <ul>
+                <li>
+                    <a href="{% url 'fileapp:simple_upload' %}">Simple Upload</a>
+                </li>
+
+            </ul>
+        </div>
+
+             <form class="navbar-form navbar-left" method="GET" action="{% url 'fileapp:search' %}">
+                 {% csrf_token %}
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <input type="text" class="form-control" name="Name" placeholder="Name">
+                    <p></p>
+                    <label for="Email">Email:</label>
+                    <input type="text" class="form-control" name="Email" placeholder="email">
+                    <p></p>
+                    <label for="Phone Number">Phone Number:</label>
+                    <input type="text" class="form-control" name="Phone_Number" placeholder="number">
+                    <p></p>
+                    <label for="age">age:</label>
+                    <input type="text" class="form-control" name="age" placeholder="age">
+
+                </div>
+
+                 <p></p>
+                <button type="submit" class="btn btn-default">Submit</button>
+             </form>
+
+
+
+
+</body>
+</html>

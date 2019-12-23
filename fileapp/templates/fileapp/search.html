@@ -1,0 +1,9 @@
+{% extends 'fileapp/base.html' %}
+{% block body_block %}
+    {% if employees %}
+    {% for each_employee in employees %}
+        <li>{{each_student.Name}}, {{each_employee.Email}}, {{each_employee.Phone_Number}}, {{each_employee.age}}</li>
+
+    {% endfor %}
+    {% endif %}
+{% endblock %}
